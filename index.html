@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Pondicherry Tourism</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#" class="logo">Pondy Heaven</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#tour">TOUR</a></li>
+        <li><a href="#package">PACKAGE</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#">BOOK TRIP</a></li>
+      </ul>
+      <div class="nav__btns">
+        <button class="btn bookTrip"  data-bs-toggle="modal"
+        data-bs-target="#exampleModal">BOOK TRIP</button>
+      </div>
+    </nav>
+
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Book a Trip</h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body custom-modal">
+            <form class="bookingForm">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name: </label>
+                <input type="text" class="form-control" required id="exampleFormControlInput1" name="name" placeholder="Your Name">
+              </div><div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Place: </label>
+                <input type="text" class="form-control" required id="exampleFormControlInput1" name="place" placeholder="Place">
+              </div>
+
+           
+           
+
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+              <div
+                id="liveToast1"
+                class="toast"
+                role="alert"
+                aria-live="assertive"
+                aria-atomic="true"
+              >
+                <div class="toast-header">
+                
+                  <strong class="me-auto modalName" >Pondy Heaven</strong>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="toast"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="toast-body">
+                 The booking has been confirmed, please check your email for further informations. :)
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+
+    <header id="home" style="padding: 0px">
+      <div class="header__container">
+        <div class="header__content">
+          <p>ELEVATE YOUR TRAVEL JOURNEY IN PONDICHERY</p>
+          <h1>Experience The Magic Of Pondy!</h1>
+          <div class="header__btns">
+            <button
+              class="btn"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Book A Trip Now
+            </button>
+          
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section__container destination__container" id="about">
+      <h2 class="section__header">Popular Destination Around Pondichery</h2>
+      <p class="section__description">
+        Discover the Most Loved Destinations From Pondy Around the Globe
+      </p>
+      <div class="destination__grid">
+        <div class="destination__card">
+          <img src="assets/imgs_browser/boating.jpg" alt="destination" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Rock beach</h4>
+            </div>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.7
+            </div>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="assets/imgs_browser/botanicalGarden.jpg" alt="destination" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Botanical Garden</h4>
+            </div>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.5
+            </div>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="assets/imgs_browser/church.webp" alt="destination" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Pondichery Church</h4>
+            </div>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.8
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="destination__grid">
+        <div class="destination__card">
+          <img src="assets/imgs_browser/auroville.jpg" alt="destination" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Auroville</h4>
+            </div>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.7
+            </div>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="assets/imgs_browser/temple.jpg" alt="destination" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Marakkanam Temple</h4>
+            </div>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.5
+            </div>
+          </div>
+        </div>
+        <div class="destination__card">
+          <img src="assets/imgs_browser/gandhiStatue.jpg" alt="destination" />
+          <div class="destination__card__details">
+            <div>
+              <h4>Gandhi Statue</h4>
+            </div>
+            <div class="destination__rating">
+              <span><i class="ri-star-fill"></i></span>
+              4.8
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="section__container journey__container" id="tour">
+      <h2 class="section__header">Journey To The Sky Made Simple!</h2>
+      <p class="section__description">
+        Effortless Planning for Your Next Adventure
+      </p>
+      <div class="journey__grid">
+        <div class="journey__card">
+          <div class="journey__card__bg">
+            <span><i class="ri-bookmark-3-line"></i></span>
+            <h4>Seamless Booking Process</h4>
+          </div>
+          <div class="journey__card__content">
+            <span><i class="ri-bookmark-3-line"></i></span>
+            <h4>Easy Reservations, One Click Away</h4>
+            <p>
+              From flights and accommodations to activities and transfers,
+              everything you need is available at your fingertips, making travel
+              planning effortless.
+            </p>
+          </div>
+        </div>
+        <div class="journey__card">
+          <div class="journey__card__bg">
+            <span><i class="ri-landscape-fill"></i></span>
+            <h4>Tailored Itineraries</h4>
+          </div>
+          <div class="journey__card__content">
+            <span><i class="ri-landscape-fill"></i></span>
+            <h4>Customized Plans Just for You</h4>
+            <p>
+              Enjoy personalized travel plans designed to match your preferences
+              and interests. Whether you seek adventure or cultural immersion,
+              our tailored itineraries ensure your journey is uniquely yours.
+            </p>
+          </div>
+        </div>
+        <div class="journey__card">
+          <div class="journey__card__bg">
+            <span><i class="ri-map-2-line"></i></span>
+            <h4>Expert Local Insights</h4>
+          </div>
+          <div class="journey__card__content">
+            <span><i class="ri-map-2-line"></i></span>
+            <h4>Insider Tips and Recommendations</h4>
+            <p>
+              We provide curated recommendations for dining, sightseeing, and
+              hidden gems, so you can experience each destination like a local.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container showcase__container" id="package">
+      <div class="showcase__image">
+        <img src="assets/imgs_browser/header.jpg" alt="showcase" />
+      </div>
+      <div class="showcase__content">
+        <h4>UNLEASH WANDERLUST WITH PONDY HEAVEN</h4>
+        <p>
+          Embark on a journey like no other with Pondy Heaven, where your travel
+          dreams come to life. Our mission is to inspire and facilitate your
+          adventures, whether you seek the vibrant energy of bustling
+          cityscapes, the serene beauty of pristine beaches, or the captivating
+          history of ancient landmarks. At Pondy Heaven, we provide expertly
+          curated destinations and personalized itineraries, ensuring that every
+          trip is tailored to your unique preferences. Discover hidden gems,
+          immerse yourself in diverse cultures, and create unforgettable
+          memories that will last a lifetime.
+        </p>
+        <p>
+          With Pondy Heaven as your ultimate travel companion, exploring the
+          wonders of the world has never been easier. Our insider tips and local
+          insights give you the tools to navigate new places with confidence and
+          excitement. From the moment you start planning to the day you return
+          home, we are dedicated to making your travel experience seamless and
+          enriching.
+        </p>
+       
+      </div>
+    </section>
+
+    <section class="section__container banner__container">
+      <div class="banner__card">
+        <h4>10+</h4>
+        <p>Years Experience</p>
+      </div>
+      <div class="banner__card">
+        <h4>12K</h4>
+        <p>Happy Clients</p>
+      </div>
+      <div class="banner__card">
+        <h4>4.8</h4>
+        <p>Overall Ratings</p>
+      </div>
+    </section>
+
+    <section class="section__container discover__container">
+      <h2 class="section__header">Discover The World From Above</h2>
+      <p class="section__description">
+        Experience Breathtaking Views and Unique Perspectives
+      </p>
+      <div class="discover__grid">
+        <div class="discover__card">
+          <span><i class="ri-camera-lens-line"></i></span>
+          <h4>Aerial Cityscapes</h4>
+          <p>
+            Witness the architectural marvels and bustling streets from
+            bird's-eye view, offering a unique perspective.
+          </p>
+        </div>
+        <div class="discover__card">
+          <span><i class="ri-ship-line"></i></span>
+          <h4>Coastal Wonders</h4>
+          <p>
+            Fly over pristine coastlines and turquoise waters, revealing hidden
+            coves and vibrant coral reefs.
+          </p>
+        </div>
+        <div class="discover__card">
+          <span><i class="ri-landscape-line"></i></span>
+          <h4>Historic Landmarks</h4>
+          <p>
+            Observe the grandeur of ancient castles and other significant sites
+            in a way that ground tours can't offer.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container client__container">
+      <h2 class="section__header">Loved By Over Thousand Travelers</h2>
+      <p class="section__description">
+        Discover the stories of wanderlust and cherished memories through the
+        eyes of our valued clients.
+      </p>
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="client__card">
+              <div class="client__content">
+                <div class="client__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                </div>
+                <p>
+                  Pondy Heaven has completely transformed my travel experience.
+                  From finding hidden gems in bustling cities to discovering
+                  serene retreats off the beaten path, every detail was
+                  thoughtfully arranged. I can't recommend Pondy Heaven enough
+                  for anyone looking to elevate their travel experience!
+                </p>
+              </div>
+              <div class="client__details">
+                <img src="assets/client.jpg" alt="client" />
+                <div>
+                  <h4>Joshua S</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <div class="client__content">
+                <div class="client__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                </div>
+                <p>
+                  My recent adventure with Pondy Heaven was nothing short of
+                  spectacular. The personalized itineraries and recommendations
+                  they provided led me to extraordinary locations that I would
+                  never have found on my own. I'm already planning my next
+                  adventure with them!
+                </p>
+              </div>
+              <div class="client__details">
+                <img src="assets/client.jpg" alt="client" />
+                <div>
+                  <h4>Thirumalesh A S</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <div class="client__content">
+                <div class="client__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                </div>
+                <p>
+                  Pondy Heaven offered a transformative experience for my
+                  research into historical landmarks. The unique aerial
+                  perspectives and provided a new level of appreciation and
+                  insight into the sites I studied. I highly recommend their
+                  services to fellow historians and cultural enthusiasts.
+                </p>
+              </div>
+              <div class="client__details">
+                <img src="assets/client.jpg" alt="client" />
+                <div>
+                  <h4>Raj Karan</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="client__card">
+              <div class="client__content">
+                <div class="client__rating">
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                  <span><i class="ri-star-fill"></i></span>
+                </div>
+                <p>
+                  Finding a balance between work and travel can be challenging,
+                  but Pondy Heaven made it effortless. Their efficient planning
+                  and excellent recommendations helped me maximize my downtime
+                  and enjoy every moment of my trip. I look forward to working
+                  with them again on future travels.
+                </p>
+              </div>
+              <div class="client__details">
+                <img src="assets/client.jpg" alt="client" />
+                <div>
+                  <h4>Kumaraguru</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="#" class="logo">Pondy Heaven</a>
+          </div>
+          <p>
+            Explore the world with ease and excitement through our comprehensive
+            travel platform. Your journey begins here, where seamless planning
+            meets unforgettable experiences.
+          </p>
+          <ul class="footer__socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/guru.offl_/"><i class="ri-instagram-line"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-youtube-line"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Flights</a></li>
+            <li><a href="#">Hotels</a></li>
+            <li><a href="#">Cruise</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact Us</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="#">
+                <span><i class="ri-phone-fill"></i></span> +91 9344456133
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="ri-record-mail-line"></i></span> kumaragurum2005@gmail.com</a>
+            </li>
+            <li>
+              <a href="#">
+                <span><i class="ri-map-pin-2-fill"></i></span> Pondichery, India
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Subscribe</h4>
+          <form action="#">
+            <input type="text" placeholder="Enter your email" />
+            <button class="btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
